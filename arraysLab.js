@@ -143,8 +143,15 @@ while (count < evens.length) {
 
 // Fill the countdown array with numbers from 10 to 1 in descending order 
 // using a for loop. Log the result.
-
+console.log("Problem 11");
 let countdown = [];
+for (let n = 10; n > 0; n--) {
+    countdown.push(n);
+}
+
+for (let m = 0; m < countdown.length; m++) {
+    console.log(countdown[m]);
+}
 
 
 //////////////////PROBLEM 12////////////////////
@@ -152,10 +159,15 @@ let countdown = [];
 // Using a for loop, fill the reversedArray with the elements of originalArray,
 // but in reversed order. Log the result.
 // In this example, the reversedArray should be [4, 3, 2, 1]
-
+console.log("Problem 12");
 const originalArray = [1, 2, 3, 4];
 const reversedArray = [];
-
+let counter = 0;
+for (let a = originalArray.length; a >= 0; a--) {
+    reversedArray[counter] = originalArray[a];
+    console.log(reversedArray[counter]);
+    counter++;
+}
 
 
 /// ///////////////PROBLEM 13////////////////////
