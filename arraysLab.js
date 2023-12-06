@@ -179,11 +179,18 @@ for (let a = originalArray.length - 1; a >= 0; a--) {
 console.log("Problem 13");
 const groceryList = ['apple', 'banana', 'cherry', 'durian']
 const itemToRemove = 'banana';
-
+const itemIndex = groceryList.indexOf(itemToRemove);
+if (itemIndex !== -1) {
+    groceryList.splice(itemIndex, 1);
+}
 
 // Also try with itemToRemove = 'apricot' and make sure that nothing happens
 // to the grocery list
-
+const itemToRemove1 = 'apricot';
+if (groceryList.indexOf(itemToRemove1) !== -1) {
+    groceryList.splice(groceryList.indexOf(itemToRemove1), 1);
+}
+console.log(groceryList);
 
 //////////////////PROBLEM 14////////////////////
 
@@ -195,9 +202,15 @@ const itemToRemove = 'banana';
 // [1, 1, 2, 5, 2, 6, 6] -> 7
 // The sum should be 7 because there are two 1's next to each other and two 6's next to each other.
 // The 2's are not repeats because they're not next to each other.
-
+console.log("Problem 14");
 let sum = 0;
 const repeats = [1, 1, 2, 5, 2, 6, 6];
+for (let indeX = 1; indeX < repeats.length; indeX++) {
+    if (repeats[indeX] === repeats[indeX - 1]) {
+        sum += repeats[indeX];
+    }
+}
+console.log('Sum = ' + sum);
 
 //////////////////PROBLEM 15////////////////////
 
@@ -205,6 +218,12 @@ const repeats = [1, 1, 2, 5, 2, 6, 6];
 // Add the INDEXES of all positive numbers to the array called 'indexes'.
 // For example:
 // [1, -2, 3, 5, -8, -13, 21] -> [0, 2, 3, 6]
-
+console.log("Problem 15");
 const inputArray = [1, -2, 3, 5, -8, -13, 21];
 const indexes = [];
+for (let numb of inputArray) {
+    if (numb > 0) {
+        indexes.push(inputArray.indexOf(numb));
+    }
+}
+console.log(indexes);
