@@ -163,7 +163,7 @@ console.log("Problem 12");
 const originalArray = [1, 2, 3, 4];
 const reversedArray = [];
 let counter = 0;
-for (let a = originalArray.length; a >= 0; a--) {
+for (let a = originalArray.length - 1; a >= 0; a--) {
     reversedArray[counter] = originalArray[a];
     console.log(reversedArray[counter]);
     counter++;
@@ -176,9 +176,10 @@ for (let a = originalArray.length; a >= 0; a--) {
 // Otherwise, do nothing. Log the final groceryList at the end.
 // As the variables are set up now, the expected output would be
 // ['apple', 'cherry', 'durian']
-
+console.log("Problem 13");
 const groceryList = ['apple', 'banana', 'cherry', 'durian']
 const itemToRemove = 'banana';
+
 
 // Also try with itemToRemove = 'apricot' and make sure that nothing happens
 // to the grocery list
